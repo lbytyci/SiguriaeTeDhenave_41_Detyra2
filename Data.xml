@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<User_Info>
+  <User Name="Tanmay">
+    <Type_Of_Invoice>Repair</Type_Of_Invoice>
+    <Password>Coding is Easy</Password>
+    <month>June</month>
+    <year>2020</year>
+    <euros>76.87</euros>
+    <details>Tanmay,Repair,June,2020,76.87</details>
+  </User>
+  <User Name="Harry">
+    <Type_Of_Invoice>Product</Type_Of_Invoice>
+    <Password>Life Is Love</Password>
+    <year>2021</year>
+    <month>July</month>
+    <euros>220</euros>
+    <details>Harry,Product,July,2021,220</details>
+  </User>
+  <User Name="George">
+    <Type_Of_Invoice>Movie Ticket</Type_Of_Invoice>
+    <Password>I am The best</Password>
+    <year>2019</year>
+    <month>September</month>
+    <euros>80</euros>
+    <details>George,Movie Ticket,September,2019,80</details>
+  </User>
+  <User Name="Verone">
+    <Type_Of_Invoice>Product</Type_Of_Invoice>
+    <Password>123Verone</Password>
+    <year>2019</year>
+    <month>January</month>
+    <euros>87.89</euros>
+    <details>Verone,Product,January,2019,87.89</details>
+  </User>
+  <User Name="Harsh">
+    <Type_Of_Invoice>njdkd</Type_Of_Invoice>
+    <Password>jxhj78</Password>
+    <year>2012</year>
+    <month>jdjd</month>
+    <euros>783</euros>
+    <details>Harsh,njdkd,jdjd,2012,783</details>
+  </User>
+</User_Info>
