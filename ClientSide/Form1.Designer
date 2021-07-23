@@ -82,4 +82,115 @@ namespace ClientSide
             this.pass.Size = new System.Drawing.Size(360, 49);
             this.pass.TabIndex = 2;
             this.pass.TextChanged += new System.EventHandler(this.pass_TextChanged);
+             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(551, 690);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(193, 57);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Register";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // m
+            // 
+            this.m.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.m.Font = new System.Drawing.Font("Ink Free", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m.Location = new System.Drawing.Point(778, 304);
+            this.m.Margin = new System.Windows.Forms.Padding(4);
+            this.m.Name = "m";
+            this.m.Size = new System.Drawing.Size(223, 49);
+            this.m.TabIndex = 4;
+            this.m.Visible = false;
+            // 
+            // I
+            // 
+            this.I.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.I.Font = new System.Drawing.Font("Ink Free", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.I.Location = new System.Drawing.Point(778, 482);
+            this.I.Margin = new System.Windows.Forms.Padding(4);
+            this.I.Name = "I";
+            this.I.Size = new System.Drawing.Size(249, 49);
+            this.I.TabIndex = 5;
+            this.I.Visible = false;
+            // 
+            // eu
+            // 
+            this.eu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.eu.Font = new System.Drawing.Font("Ink Free", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eu.Location = new System.Drawing.Point(778, 388);
+            this.eu.Margin = new System.Windows.Forms.Padding(4);
+            this.eu.Name = "eu";
+            this.eu.Size = new System.Drawing.Size(239, 49);
+            this.eu.TabIndex = 6;
+            this.eu.Visible = false;
+            // 
+            // y
+            // 
+            this.y.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.y.Font = new System.Drawing.Font("Ink Free", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.y.Location = new System.Drawing.Point(778, 214);
+            this.y.Margin = new System.Windows.Forms.Padding(4);
+            this.y.Name = "y";
+            this.y.Size = new System.Drawing.Size(180, 49);
+            this.y.TabIndex = 7;
+            this.y.Visible = false;
+            // 
+            // ly
+            // 
+            this.ly.AutoSize = true;
+            this.ly.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ly.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ly.Location = new System.Drawing.Point(569, 214);
+            this.ly.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ly.Name = "ly";
+            this.ly.Size = new System.Drawing.Size(85, 38);
+            this.ly.TabIndex = 8;
+            this.ly.Text = "Year";
+            this.ly.Visible = false;
+            // 
+            // le
+            // 
+            this.le.AutoSize = true;
+            this.le.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.le.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.le.Location = new System.Drawing.Point(569, 388);
+            this.le.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.le.Name = "le";
+            this.le.Size = new System.Drawing.Size(90, 38);
+            this.le.TabIndex = 9;
+            this.le.Text = "Euro";
+            this.le.Visible = false;
+            // 
+            // li
+            // 
+            this.li.AutoSize = true;
+            this.li.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.li.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.li.Location = new System.Drawing.Point(449, 502);
+            this.li.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.li.Name = "li";
+            this.li.Size = new System.Drawing.Size(247, 38);
+            this.li.TabIndex = 13;
+            this.li.Text = "Type of Invoice";
+            this.li.Visible = false;
+            // 
+            // lm
+            // 
+            this.lm.AutoSize = true;
+            this.lm.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lm.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lm.Location = new System.Drawing.Point(569, 304);
+            this.lm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lm.Name = "lm";
+            this.lm.Size = new System.Drawing.Size(116, 38);
+            this.lm.TabIndex = 14;
+            this.lm.Text = "Month";
+            this.lm.Visible = false;
+
+            
 
