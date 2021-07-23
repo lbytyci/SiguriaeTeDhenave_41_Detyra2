@@ -36,7 +36,6 @@ namespace ClientSide
         {
             
             InitializeComponent();
-           // how to manipulate with form's design 
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,4 +100,93 @@ namespace ClientSide
             }
 
         }
+        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            client.Connect(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080));
+            byte[] sendr = Encoding.UTF8.GetBytes(User.Text + "," + pass.Text+","+m.Text+","+y.Text+","+eu.Text+","+I.Text);
+            client.Send(sendr, sendr.Length);
+            Console.WriteLine("Recieving values...........");
+
+
+        }
+
+        private void User_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button3.Show();
+            li.Show(); ly.Show(); lm.Show(); le.Show();
+            I.Show(); m.Show(); y.Show(); eu.Show();
+            button2.Hide();
+
+        }
+        public static string RSAEncrypt(string content)
+        {
+            string my = "C:\\publicKey.xml";
+            string publicKeyFiles = File.ReadAllText(my);
+
+            string publickey = publicKeyFiles;
+            RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+            byte[] cipherbytes;
+            rsa.FromXmlString(publickey);
+            cipherbytes = rsa.Encrypt(Encoding.UTF8.GetBytes(content), false);
+
+            return Convert.ToBase64String(cipherbytes);
+
+        }
+        private RSACryptoServiceProvider GetSenderCipher()
+        {
+            RSACryptoServiceProvider sender = new RSACryptoServiceProvider();
+            sender.FromXmlString(_senderPublicKey);
+            return sender;
+        }
+
+        private byte[] ComputeHashForMessage(byte[] cipherBytes)
+        {
+            SHA1Managed alg = new SHA1Managed();
+            byte[] hash = alg.ComputeHash(cipherBytes);
+            return hash;
+        }
+        private RSACryptoServiceProvider GetReceiverCipher()
+        {
+            RSACryptoServiceProvider sender = new RSACryptoServiceProvider();
+            sender.FromXmlString(_myRsaKeys);
+            return sender;
+        }
+        private void VerifySignature(byte[] computedHash, byte[] signatureBytes)
+        {
+            RSACryptoServiceProvider senderCipher = GetSenderCipher();
+            RSAPKCS1SignatureDeformatter deformatter = new RSAPKCS1SignatureDeformatter(senderCipher);
+            deformatter.SetHashAlgorithm("SHA1");
+            if (!deformatter.VerifySignature(computedHash, signatureBytes))
+            {
+                throw new ApplicationException("Signature did not match from sender");
+            }
+        }
+        public string ExtractMessage(DigitalSignatureResult signatureResult)
+        {
+            byte[] cipherTextBytes = Convert.FromBase64String(signatureResult.CipherText);
+            byte[] signatureBytes = Convert.FromBase64String(signatureResult.SignatureText);
+            byte[] recomputedHash = ComputeHashForMessage(cipherTextBytes);
+            VerifySignature(recomputedHash, signatureBytes);
+            byte[] plainTextBytes = GetReceiverCipher().Decrypt(cipherTextBytes, false);
+            return Encoding.UTF8.GetString(plainTextBytes);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+  }
+
+        
         
