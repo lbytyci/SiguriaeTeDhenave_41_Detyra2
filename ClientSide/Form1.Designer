@@ -33,6 +33,8 @@ namespace ClientSide
             this.User = new System.Windows.Forms.TextBox();
             this.pass = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            
+            
             this.m = new System.Windows.Forms.TextBox();
             this.I = new System.Windows.Forms.TextBox();
             this.eu = new System.Windows.Forms.TextBox();
@@ -45,3 +47,39 @@ namespace ClientSide
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1063, 693);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(160, 52);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Login";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // User
+            // 
+            this.User.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.User.Font = new System.Drawing.Font("Ink Free", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User.Location = new System.Drawing.Point(778, 27);
+            this.User.Margin = new System.Windows.Forms.Padding(4);
+            this.User.Name = "User";
+            this.User.Size = new System.Drawing.Size(360, 49);
+            this.User.TabIndex = 1;
+            this.User.TextChanged += new System.EventHandler(this.User_TextChanged);
+            // 
+            // pass
+            // 
+            this.pass.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pass.Font = new System.Drawing.Font("Ink Free", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.Location = new System.Drawing.Point(778, 126);
+            this.pass.Margin = new System.Windows.Forms.Padding(4);
+            this.pass.Name = "pass";
+            this.pass.Size = new System.Drawing.Size(360, 49);
+            this.pass.TabIndex = 2;
+            this.pass.TextChanged += new System.EventHandler(this.pass_TextChanged);
+
